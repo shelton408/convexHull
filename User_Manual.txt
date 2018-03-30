@@ -1,0 +1,27 @@
+@Author Shelton Cai
+Python v. 3.6.2
+
+convexHull User Manual:
+1.To run the program, please run the file convexHull.py through a terminal using python. 
+2.The program will generate a set of 40 random 2D points, and run quickhull to determine the convex hull.The program will display a plot of points then highlight points in the convex hull in the order they are added to the output. 
+3.The terminal will then output the set of points in the convex hull, and prompt the user to input new points to test whether they are contained within the hull. The new points should be entered in the format: num,num
+4.The graph will plot the new point as a diamond on the plot, and the diamond will be red if outside the hull, or green if either on or inside the hull. The terminal will also display the result.
+5. repeat from step 3, input quit to exit the program.
+
+WARNING: If you wait to long to input, the plot will stop responding, however inputing another point to test will cause it to work again.
+
+
+
+Method listings(further details in in-line documentation):
+convexHull2D- finds first 2 points, then calls recurse2D to do quickhull
+recurse2D- recursion and plotting for quickhull
+linePointDist2D- finds the triangle size of 3 points, while this is not the distance, it gives us an idea of the relative magnitudes of the distance
+sideOf- returns which side of a line a point is on through cross product
+isInside- tests if a point is inside a convex hull
+isInsideRunner- starts a repeating request for user input for isInside
+main- generates a set of random points, runs convexHull2D, then isInsideRunner
+
+
+Sample Outputs:
+commandLineSample- image of the terminal display and user input/program output.
+GraphSample- an image of the plot corresponding to the terminal image
